@@ -1,0 +1,67 @@
+<!-- item_histori_reservasi.xml -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:radius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewNomorBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Nomor Booking: BK-481407"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: s@mail.com"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal: 2023-09-01T17:00:00.000Z"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewMeja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meja: 5"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewNamaRestoran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Restoran: Sadrasa Kitchen and Bar"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama: a"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Dipesan"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

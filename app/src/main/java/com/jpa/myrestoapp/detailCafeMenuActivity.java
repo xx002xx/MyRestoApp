@@ -49,6 +49,7 @@ public class detailCafeMenuActivity extends AppCompatActivity {
         TextView cafeDetailName = findViewById(R.id.cafeDetailName);
         TextView cafeDetailDescription = findViewById(R.id.cafeDetailDescription);
         TextView mejaDetail = findViewById(R.id.mejaDetail);
+        ImageView cartIcon = findViewById(R.id.cartIcon);
 
         // Mendapatkan objek SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("sessionData", Context.MODE_PRIVATE);
@@ -73,6 +74,13 @@ public class detailCafeMenuActivity extends AppCompatActivity {
             }
         });
 
+        cartIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(detailCafeMenuActivity.this, keranjangActivity.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerView = findViewById(R.id.menuRecyclerView);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);

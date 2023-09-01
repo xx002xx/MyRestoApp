@@ -2,7 +2,9 @@ package com.jpa.myrestoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -50,8 +52,17 @@ public class MainActivity extends AppCompatActivity {
         accountIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("loginStatus", Context.MODE_PRIVATE);
+                boolean userIsLoggedIn = sharedPreferences.getBoolean("userIsLoggedIn", false);
+                if (!userIsLoggedIn) {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(MainActivity.this, PanelActivity.class);
+                    startActivity(intent);
+                }
+
+
             }
         });
     }
